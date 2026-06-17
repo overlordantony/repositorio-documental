@@ -158,20 +158,20 @@ Ambas son administrables desde el panel sin tocar la base de datos:
 
 ## Seguridad implementada
 
-- ✅ CSRF tokens en todos los formularios POST
-- ✅ Protección SQL Injection — PDO con prepared statements
-- ✅ XSS — escape de toda salida con `htmlspecialchars`
-- ✅ Cabeceras HTTP de seguridad (CSP, X-Frame-Options, Referrer-Policy)
-- ✅ Sesión con regeneración periódica de ID
-- ✅ Cookies HttpOnly + SameSite=Strict
-- ✅ Archivos de configuración bloqueados desde web (.htaccess)
-- ✅ Carpeta `uploads/` sin listado ni ejecución de scripts
-- ✅ Delay en login fallido (anti fuerza bruta)
-- ✅ Log de actividad con IP y usuario
-- ✅ Validación de tipo de archivo en servidor (no solo en cliente)
-- ✅ Nombres de archivo aleatorios al subir (no predecibles)
-- ✅ Control de roles granular por permiso
-- ✅ Protección para no degradar/eliminar el último superadmin
+- CSRF tokens en todos los formularios POST
+- Protección SQL Injection — PDO con prepared statements
+- XSS — escape de toda salida con `htmlspecialchars`
+- Cabeceras HTTP de seguridad (CSP, X-Frame-Options, Referrer-Policy)
+- Sesión con regeneración periódica de ID
+- Cookies HttpOnly + SameSite=Strict
+- Archivos de configuración bloqueados desde web (.htaccess)
+- Carpeta `uploads/` sin listado ni ejecución de scripts
+- Delay en login fallido (anti fuerza bruta)
+- Log de actividad con IP y usuario
+- Validación de tipo de archivo en servidor (no solo en cliente)
+- Nombres de archivo aleatorios al subir (no predecibles)
+- Control de roles granular por permiso
+- Protección para no degradar/eliminar el último superadmin
 
 ---
 
