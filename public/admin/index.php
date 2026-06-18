@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Acceso — <?= e(INST_NOMBRE) ?></title>
+<title>Acceso — <?= e(PROYECT_NAME) ?></title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/admin.css">
 <style>
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php if (file_exists(PUBLIC_PATH . '/' . LOGO_FILE)): ?>
       <img src="<?= BASE_URL ?>/<?= e(LOGO_FILE) ?>" alt="Logo">
     <?php endif; ?>
-    <h1><?= e(INST_NOMBRE) ?></h1>
+    <h1><?= e(PROYECT_NAME) ?></h1>
     <p>Panel de administración</p>
   </div>
   <div class="sep"></div>

@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?= e($pageTitle ?? 'Repositorio') ?> — <?= e(INST_NOMBRE) ?></title>
+<title><?= e($pageTitle ?? 'Repositorio') ?> — <?= e(PROYECT_NAME) ?></title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/public.css">
@@ -17,12 +17,12 @@
 <header class="header">
   <a href="<?= BASE_URL ?>/" class="header-logo">
     <?php if (file_exists(PUBLIC_PATH . '/' . LOGO_FILE)): ?>
-      <img src="<?= BASE_URL ?>/<?= e(LOGO_FILE) ?>" alt="Logo <?= e(INST_NOMBRE) ?>">
+      <img src="<?= BASE_URL ?>/<?= e(LOGO_FILE) ?>" alt="Logo <?= e(PROYECT_NAME) ?>">
     <?php else: ?>
-      <div class="logo-placeholder"><?= e(substr(INST_NOMBRE_CORTO, 0, 1)) ?></div>
+      <div class="logo-placeholder"><?= e(substr(PROYECT_NAME_SUB, 0, 1)) ?></div>
     <?php endif; ?>
     <div class="header-brand">
-      <h1><?= e(INST_NOMBRE) ?></h1>
+      <h1><?= e(PROYECT_NAME) ?></h1>
       <p>Repositorio Documental</p>
     </div>
   </a>

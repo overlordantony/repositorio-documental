@@ -99,9 +99,9 @@ define('DB_NAME', 'repositorio_docs');
 define('DB_USER', 'tu_usuario');
 define('DB_PASS', 'tu_password');
 
-define('INST_NOMBRE',       'Nombre de la organización');
-define('INST_NOMBRE_CORTO', 'SIGLA');
-define('INST_EMAIL',        'contacto@organizacion.com');
+define('PROYECT_NAME',       'Nombre de la organización');
+define('PROYECT_NAME_SUB', 'SIGLA');
+define('EMAIL',        'contacto@organizacion.com');
 
 // Entorno: 'development' para ver errores, 'production' para ocultalos
 define('APP_ENV', 'production');

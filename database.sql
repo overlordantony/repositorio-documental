@@ -17,12 +17,8 @@ CREATE TABLE categorias (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO categorias (nombre, color_texto, color_fondo, orden) VALUES
-  ('Resoluciones', '#3B6D11', '#EAF3DE', 1),
-  ('Acuerdos',     '#3C3489', '#EEEDFE', 2),
-  ('Circulares',   '#854F0B', '#FAEEDA', 3),
-  ('Plantillas',   '#185FA5', '#E6F1FB', 4),
-  ('DIAN',         '#993C1D', '#FAECE7', 5),
-  ('Otros',        '#5F5E5A', '#F1EFE8', 6);
+  ('Test', '#3B6D11', '#EAF3DE', 1),
+  ('Otros',     '#3C3489', '#EEEDFE', 2);
 
 -- ------------------------------------------------------------
 -- 2. DEPENDENCIAS
@@ -36,12 +32,8 @@ CREATE TABLE dependencias (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO dependencias (nombre, sigla) VALUES
-  ('Rectoría',          'REC'),
-  ('Consejo Superior',  'CS'),
-  ('Secretaría General','SG'),
-  ('Jurídica',          'JUR'),
-  ('Vicerrectoría Académica', 'VRA'),
-  ('Talento Humano',    'TH');
+  ('Responsable 1', 'R1'),
+  ('Test', 'T');
 
 -- ------------------------------------------------------------
 -- 3. USUARIOS ADMIN

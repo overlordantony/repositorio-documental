@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?= e($pageTitle ?? 'Panel') ?> — Admin <?= e(INST_NOMBRE_CORTO) ?></title>
+<title><?= e($pageTitle ?? 'Panel') ?> — Admin <?= e(PROYECT_NAME_SUB) ?></title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/admin.css">
@@ -19,10 +19,10 @@
     <?php if (file_exists(PUBLIC_PATH . '/' . LOGO_FILE)): ?>
       <img src="<?= BASE_URL ?>/<?= e(LOGO_FILE) ?>" alt="Logo">
     <?php else: ?>
-      <div class="lph"><?= e(substr(INST_NOMBRE_CORTO, 0, 1)) ?></div>
+      <div class="lph"><?= e(substr(PROYECT_NAME_SUB, 0, 1)) ?></div>
     <?php endif; ?>
     <div>
-      <h1><?= e(INST_NOMBRE_CORTO) ?> · Panel Admin</h1>
+      <h1><?= e(PROYECT_NAME_SUB) ?> · Panel Admin</h1>
       <p><?= e(Auth::nombre()) ?> — <?= e(labelRol(Auth::rol())) ?></p>
     </div>
   </a>

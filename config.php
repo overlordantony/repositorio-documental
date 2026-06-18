@@ -1,18 +1,20 @@
 <?php
 // ============================================================
-// config.php — Configuración global
+// Configuración global
 // ============================================================
 
 // Institución
-define('INST_NOMBRE',       'Documentos');
-define('INST_NOMBRE_CORTO', 'Documentos');
-define('INST_EMAIL',        'info@info.com');
+define('PROYECT_NAME',       'Documentos');
+define('PROYECT_NAME_SUB', 'Documentos');
+define('EMAIL',        'info@info.com');
+define('GITHUB_URL',        'https://github.com/overlordantony');
+define('GITHUB_NAME',       'OverlordAntony');
 
 // Base de datos
 define('DB_HOST',    'localhost');
 define('DB_NAME',    'repositorio_docs');
-define('DB_USER',    'root');   // <-- cambiar
-define('DB_PASS',    '');  // <-- cambiar
+define('DB_USER',    'root');
+define('DB_PASS',    '');
 define('DB_CHARSET', 'utf8mb4');
 
 // Rutas
@@ -30,7 +32,7 @@ define('LOGO_FILE', 'assets/img/logo.png');
 
 // Subida de archivos
 define('MAX_UPLOAD_MB',    50);
-define('ALLOWED_EXT', ['pdf','doc','docx','ppt','pptx','xls','xlsx']);
+define('ALLOWED_EXT', ['pdf','doc','docx','ppt','pptx','xls','xlsx', 'png','jpg','jpeg']);
 
 // Paginación
 define('PER_PAGE_PUBLIC', 15);
@@ -51,17 +53,12 @@ if (APP_ENV === 'development') {
 // Zona horaria
 date_default_timezone_set('America/Bogota');
 
-// ── BASE URL dinámica ────────────────────────────────────
-// Detecta automáticamente el subdirectorio donde está el proyecto.
-// Funciona en local (http://localhost/2026/repositorio/public/)
-// y en producción (https://dominio.com/repositorio/public/)
-// sin cambiar nada al pasar de entorno.
+// BASE URL dinámica
 if (!defined('BASE_URL')) {
     // Tomamos el SCRIPT_NAME del archivo que inició la petición
     $scriptDir = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
 
-    // Normalizamos separadores y eliminamos segmentos internos de admin
-    // para que desde /public/admin/panel.php la base siga siendo /…/public
+    // Normalizar separadores y eliminamos segmentos internos de admin
     $scriptDir = str_replace('\\', '/', $scriptDir);
     $scriptDir = preg_replace('#/admin$#', '', $scriptDir);
 
